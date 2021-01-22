@@ -1,0 +1,28 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<script src="script.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+</head>
+
+<body onload="animate_string('target')">
+	<h1>Hello there!</h1>
+	<a href="/me.html">My other page</a>
+	<pre id="target">
+      Hello Swetha!</pre>
+	<script type="text/javascript">
+		function animate_string(id) {
+				var element=document.getElementById(id);
+				var nextNode=element.childNodes[0];
+				var text=nextNode.data;
+			
+			    setInterval(function(){
+                   text=text[text.length-1]+text.substring(0,text.length-1);
+                   nextNode.data=text;
+			    },100)
+		    }
+	</script>
+</body>
+
+</html>
